@@ -3,7 +3,8 @@
 
 	<script src="js/clipboard.js"></script>
     <script>
-    var clipboard = new ClipboardJS('.fuzhitkl');
+    /*
+	var clipboard = new ClipboardJS('.fuzhitkl');
 
     clipboard.on('success', function(e) {
         console.log(e);
@@ -12,6 +13,7 @@
     clipboard.on('error', function(e) {
         console.log(e);
     });
+	*/
     </script>
 
    <head>
@@ -29,7 +31,7 @@
    </head>
    <style  type="text/css" id="css_love">
    .block-date-hero li {
-    font-size: 50px;
+    font-size: 37px;
 	}
 	
 	.heavy {
@@ -39,7 +41,7 @@
     font-size: 27px;
 	}
 	p.heavy.normal {
-    font-size: 36px;
+    font-size: 27px;
 	}
    </style>
    <body>
@@ -259,7 +261,7 @@
          </section>
          <section class="just-married pt-200 pb-200 overlay">
             <div class="background-img">
-               <img src="picture/17.jpg" alt="">
+               <img src="picture/99.jpg" alt="">
             </div>
             <div class="container">
                <div class="row">
@@ -276,7 +278,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-sm-12 text-center">
-                     <p class="uppercase heavy normal">&copy; 2022 love. 袁春海 & 张新兰</p>
+                     <p class="uppercase heavy normal">&copy; 2022 love. 袁春海 ❤ 张新兰</p>
                   </div>
                </div>
             </div>
@@ -354,12 +356,12 @@
     autoPlayAudio1(); // 推荐使用方法1
     </script>
 	<bgsound src="mp3/xiaoxingyun.mp3" loop="-1"/>
-<audio src="mp3/xiaoxingyun.mp3" controls autoplay='autoplay' loop="loop" id="bgmusic" style="display:none"></audio>
+<audio src="mp3/xiaoxingyun.mp3" type="audio/mpeg" controls autoplay='autoplay' loop="loop" id="bgmusic" style="display:none"></audio>
  <script>
     (function() {
         function log(info) {
             console.log(info);
-            // alert(info);
+            //alert(info);
         }
         function forceSafariPlayAudio() {
             audioEl.load(); // iOS 9   还需要额外的 load 一下, 否则直接 play 无效
@@ -377,9 +379,11 @@
         audioEl.addEventListener('loadedmetadata', function() {
             log('loadedmetadata');
         }, false);
+		
         audioEl.addEventListener('canplay', function() {
             log('canplay');
         }, false);
+		
         audioEl.addEventListener('play', function() {
             log('play');
             // 当 audio 能够播放后, 移除这个事件
